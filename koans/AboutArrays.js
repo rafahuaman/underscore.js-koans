@@ -4,7 +4,7 @@ describe("Underscore Array functions", function() {
     var arrayWithDups  = [1,2,1,3,4,2,5], result;
     result = _.uniq(arrayWithDups);
 
-    expect([1,2,3,4,5]).toEqual(result);
+    expect(__).toEqual(result);
   });
 
   it("_.range should return range", function() {
@@ -15,8 +15,8 @@ describe("Underscore Array functions", function() {
     hundreds = _.range(100,1000,100);
     negativeUnits = _.range(-1,-10,-1);
 
-    expect([1,2,3,4,5,6,7,8,9,10]).toEqual(units);
-    expect([10,20,30,40,50,60,70,80,90,100]).toEqual(tens);
+    expect(__).toEqual(units);
+    expect(__).toEqual(tens);
     expect(__).toEqual(hundreds);
     expect(__).toEqual(negativeUnits);
   });
