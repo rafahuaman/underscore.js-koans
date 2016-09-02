@@ -1,4 +1,4 @@
-describe("Underscore Utilities functions", function() {
+describe("Underscore Utility functions", function() {
  
   it("_.template compiles JavaScript templates into functions that can be evaluated for rendering", function() {
     // internet says this is the important Utilities function of _.js - http://underscorejs.org/#template

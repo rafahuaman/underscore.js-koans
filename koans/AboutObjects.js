@@ -1,4 +1,4 @@
-describe("Underscore Array functions", function() {
+describe("Underscore Object functions", function() {
 
   it("_.keys should return an array with an object's keys ", function() {
     var object  = { one: 1, two: 2, three: 3 }, keys;
