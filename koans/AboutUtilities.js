@@ -6,7 +6,7 @@ describe("Underscore Utility functions", function() {
  
     var compiled = _.template(template,websites);
     
-    expect(compiled).toEqual(__);
+    expect(__).toEqual(compiled);
 
   });
 
