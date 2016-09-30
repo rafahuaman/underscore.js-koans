@@ -85,15 +85,27 @@ describe("Underscore Function functions", function() {
     expect(__).toEqual(sayHi());
     expect(__).toEqual(sayAloha());
   });
-
+  
+  //Try both before you give up...
   it("_.compose should return the composition of a list of functions, each taking the return of the next.", function() {
     var acquaintance = "Jimmy",
     sayHi = function(name) { return "Hi, " + name; },
     sayBye = function(pleasantry) { return pleasantry + " Bye."; },
     sayPleasantry = function(hello) { return hello + ". Long time, no see!"; },
-    passbyGreeting = _.compose(sayHi, sayBye, sayPleasantry);
+    passbyGreeting = _.compose(sayHi,sayPleasantry,sayBye);
 
     expect(__).toEqual(passbyGreeting(acquaintance));
+  
+    //"...One thing to note is that the functions are run in reverse or to which ther are passed..."
+    //http://chrislaughlin.github.io/2015/05/31/underscorejs-compose.html
+    var otherAcquaintance = "Johnny",
+    sayHiAgain = function(name) { return "Hi, " + name; },
+    sayPleasantryAgain = function(hello) { return hello + ". Long time, no see!"; },
+    sayByeAgain = function(pleasantry) { return pleasantry + " Bye."; },
+    passbyGreetingAgain = _.compose(sayHiAgain, sayByeAgain, sayPleasantryAgain);
+
+    expect(__).toEqual(passbyGreetingAgain(otherAcquaintance));
+    
   });
 
 });
